@@ -63,12 +63,8 @@ class Signup extends Component {
               placeholder="Confirm password"
               name="confirmPassword"
             />
-
-            {/* <Link to="/login"> */}
-            <button type="submit">Signup</button>
-            {/* <input type="button" name="login" value="login" /> */}
-            {/* </Link> */}
-            <Link to="/signup">
+            <button type="submit" className="buttonheight">Signup</button>
+            <Link to="/login">
               <input type="button" name="login" value="login" />
             </Link>
             <button type="reset" name="cancel" value="cancel">Clear</button>

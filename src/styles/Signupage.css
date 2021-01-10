@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 22%;
   
   }
   .signupbox p
@@ -23,11 +23,16 @@
   padding: 0;
   font-weight: bold;
   }
+  .buttonheight{
+    height: 10%;
+  }
+  
   .signupbox input,button
   {
     width: 100%;
+    
     margin-bottom: 20px;
-    height: 20px;
+   
   
   }
   .signupbox input[type="text"], input[type="password"]
@@ -39,6 +44,7 @@
     height: 40px;
     color: #fff;
     font-size: 16px;
+   
   
   }
   .signupbox button,
@@ -46,6 +52,7 @@
 {
   color: white;
   background-color: black;
+  
 }
 
   
