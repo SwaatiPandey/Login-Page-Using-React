@@ -11,11 +11,10 @@ class Router extends Component {
       <div>
         <BrowserRouter>
           <Switch>
-          <Route path="/index" exact component={Index} />
-          <Route path="/home" exact component={Home} />
+            <Route path="/" exact component={Index} />
+            <Route path="/home" exact component={Home} />
             <Route path="/signup" exact component={Signup} />
             <Route path="/login" exact component={Login} />
-
           </Switch>
         </BrowserRouter>
       </div>

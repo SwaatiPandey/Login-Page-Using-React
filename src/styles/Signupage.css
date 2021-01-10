@@ -8,8 +8,8 @@
     left: 50%;
     box-sizing: border-box;
     padding: 10px 30px;
-   
   }
+
   h1{
     margin: 0;
     padding: 0 0 20px;
@@ -23,21 +23,14 @@
   padding: 0;
   font-weight: bold;
   }
-  .signupbox input
+  .signupbox input,button
   {
     width: 100%;
     margin-bottom: 20px;
+    height: 20px;
   
   }
-
-  .signupbox input[type="submit"],
-.signupbox input[type="button"]
-{
-  color: white;
-  background-color: black;
-}
-
-  .signupbox input[type="text"], input[type="Password"]
+  .signupbox input[type="text"], input[type="password"]
   {
     border: none;
     border-bottom: 1px solid #fff;
@@ -48,7 +41,16 @@
     font-size: 16px;
   
   }
-  .signupbox input[type="submit"]:hover
+  .signupbox button,
+.signupbox input[type="button"]
+{
+  color: white;
+  background-color: black;
+}
+
+  
+  .signupbox input[type="button"]:hover,
+  .signupbox button:hover
   {
     cursor: pointer;
     background: #ffc107;

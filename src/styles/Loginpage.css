@@ -9,6 +9,7 @@
   box-sizing: border-box;
   padding: 10px 30px;
 }
+
 h1{
   margin: 0;
   padding: 0 0 20px;
@@ -22,7 +23,7 @@ margin: 0;
 padding: 0;
 font-weight: bold;
 }
-.loginbox input
+.loginbox input,button
 {
   width: 100%;
   margin-bottom: 20px;
@@ -39,27 +40,21 @@ font-weight: bold;
   font-size: 16px;
 
 }
-.loginbox input[type="submit"],
+.loginbox button,
 .loginbox input[type="button"]
 {
   color: white;
   background-color: black;
 }
 
-.loginbox input[type="submit"]:hover
+.loginbox input[type="button"]:hover,
+.loginbox button:hover
 {
   cursor: pointer;
   background: #ffc107;
   color: #000;
   
 }
-.loginbox input[type="button"]:hover
-{
-  cursor: pointer;
-  background: #ffc107;
-  color: #000;
-}
-
 
 @media(max-width:760px)
 {

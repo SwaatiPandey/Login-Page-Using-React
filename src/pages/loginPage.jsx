@@ -1,55 +1,45 @@
 import { Component } from "react";
-import  "../styles/Loginpage.css";
+import "../styles/Loginpage.css";
+
 import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-// import loginUrl from "";
+import loginUrl from "../apicalls/apicall";
 
 class Login extends Component {
   state = {
-    email: "",
-    password: "",
+    emailId: "",
+    useraPassword: "",
   };
   onLogin = (event) => {
     event.preventDefault();
-    fetch(email, password, {
+    fetch(loginUrl + "users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
+      mode: "cors",
       body: JSON.stringify({
-        email: event.target.email.value,
-        password: event.target.password.value,
+        emailId: event.target.email.value,
+        userPassword: event.target.password.value,
       }),
     })
-      .then((Response) => {
-        return Response.json();
+      .then((response) => {
+        console.log(response);
+        return response.json();
       })
       .then((data) => {
-        let email = [...this.state.email];
-        email.push(data.data);
-        this.setState({ email: email });
-        let password = [...this.state.password];
-        password.push(data.data);
-        this.setState({ password: password });
+        if (data.data) {
+          console.log("Login Successful");
+          this.props.history.push("/home");
+        }
+        console.log(data);
       })
       .catch((err) => {
         console.log(err);
       });
   };
-  componentDidMount = (event) => {
-    fetch(loginUrl)
-      .then((Response) => {
-        return Response.json();
-      })
-      .then((data) => {
-        this.setState({ email: [...data.data.email] });
-        this.setState({ password: [...data.data.password] });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+
   render() {
     return (
       <div>
@@ -61,17 +51,15 @@ class Login extends Component {
             <input type="text" placeholder="Enter your email" name="email" />
             <p>Password</p>
             <input
-              type="text"
+              type="password"
               placeholder="Enter your password"
               name="password"
             />
-            <Link to="/login">
-              <input type="submit" name="login" value="login" />
-            </Link>
+            <button type="submit">Login</button>
             <Link to="/signup">
               <input type="button" name="signup" value="signup" />
             </Link>
-            <input type="button" name="cancel" value="cancel" />
+            <button type="reset" name="cancel" value="cancel">clear</button>
           </form>
         </div>
         <Footer />
