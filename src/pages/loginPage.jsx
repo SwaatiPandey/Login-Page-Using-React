@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import loginUrl from "../apicalls/apicall";
 import LoggedInPage from "./loggedInPage";
+// import Signup from "./signup";
 
 class Login extends Component {
   state = {
@@ -29,12 +30,12 @@ class Login extends Component {
       })
       .then((data) => {
         if (data.data) {
-          console.log("Login Successful");
-          al
           this.setState({ status: "successful" });
-          
-        }
-        console.log(data);
+          }
+          else{
+            alert("Invalid Email or Password");
+          }
+        
       })
       .catch((err) => {
         console.log(err);
@@ -55,7 +56,7 @@ class Login extends Component {
                 <p>Email</p>
                 <input
                   type="text"
-                  placeholder="Enter your email"
+                 placeholder="Enter your email"
                   name="email"
                 />
                 <p>Password</p>
@@ -76,6 +77,7 @@ class Login extends Component {
             <Footer />
           </div>
         )}
+
       </div>
     );
   }
