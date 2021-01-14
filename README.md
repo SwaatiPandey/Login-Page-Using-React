@@ -2,9 +2,9 @@
 
 2.Description:  Login page using react components for creating a login functionality. The application UI makes use of the backend endpoints created during node.js training session. The endpoints will provide a login and signup functionality. The application provides following functionality
 
-            Allow login using a username and password form fields
-            Display dummy components upon successful login
-            Upon failure of login prompt the user with relevant error messages.
+     A) Allow login using a username and password form fields.
+     B) Display dummy componenets upon succesful login.
+     C) Upon failure of login prompt the user with relevant error message.
 
 3.Dependencies: Dependencies can be installed by giving command npm install (package name)
               For FRONTEND : react,react-router-dom"
