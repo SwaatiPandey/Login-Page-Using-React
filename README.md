@@ -18,8 +18,8 @@
 *FRONTEND: It has following folders:Api call, which contains url oh the hosted api. Component which contains footer and navigation part.Pages contains all the pages files. Routes which contains all the routes.
 
 
-4.Demo: This is the link of hosted backend:-http://blog-backend-hosting.herokuapp.com/blogs
-        This is the link of project 
+4.Demo: This is the link of hosted backend: -https://login-backend-react.herokuapp.com/
+        This is the link of project       :- https://login-page-using-react-git-master.swaatipandey.vercel.app/
 
 5.Technologies Used: FRONTEND   React.js,
                      BACKEND   Nodejs,Postman,express
