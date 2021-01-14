@@ -4,13 +4,12 @@ body{
 .main-div{
     height: 80vh;
     text-align: center;
-    /* background-color: teal; */
 }
 h1{
-    padding: 10vh;
+    padding-top: 15vh;
     font-size: 60px;
 }
 .para {
-padding: 10vh;
+padding-top: 5vh;
 font-size: 40px;
 }

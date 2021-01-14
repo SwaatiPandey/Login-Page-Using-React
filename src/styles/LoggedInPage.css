@@ -1,11 +1,10 @@
-body{
-    background-color: teal;
-}
 .main-div{
     height: 80vh;
     text-align: center;
+   
 }
-h1{
+h2{
+   
     padding-top: 15vh;
     font-size: 60px;
 }

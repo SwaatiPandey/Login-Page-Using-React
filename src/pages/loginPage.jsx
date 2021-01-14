@@ -1,15 +1,14 @@
 import { Component } from "react";
 import "../styles/Loginpage.css";
-
 import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import loginUrl from "../apicalls/apicall";
+import LoggedInPage from "./loggedInPage";
 
 class Login extends Component {
   state = {
-    emailId: "",
-    useraPassword: "",
+    status: "",
   };
   onLogin = (event) => {
     event.preventDefault();
@@ -25,13 +24,15 @@ class Login extends Component {
       }),
     })
       .then((response) => {
-        console.log(response);
+        console.log(response.emailId);
         return response.json();
       })
       .then((data) => {
         if (data.data) {
           console.log("Login Successful");
-          this.props.history.push("/home");
+          al
+          this.setState({ status: "successful" });
+          
         }
         console.log(data);
       })
@@ -43,26 +44,38 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <Navigation />
-        <div className="loginbox">
-          <h1>Login Page</h1>
-          <form className="form-container" onSubmit={this.onLogin}>
-            <p>Email</p>
-            <input type="text" placeholder="Enter your email" name="email" />
-            <p>Password</p>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              name="password"
-            />
-            <button type="submit">Login</button>
-            <Link to="/signup">
-              <input type="button" name="signup" value="signup" />
-            </Link>
-            <button type="reset" name="cancel" value="cancel">clear</button>
-          </form>
-        </div>
-        <Footer />
+        {this.state.status === "successful" ? (
+          <LoggedInPage/>
+        ) : (
+          <div>
+            <Navigation />
+            <div className="loginbox">
+              <h2>Login Page</h2>
+              <form className="form-container" onSubmit={this.onLogin}>
+                <p>Email</p>
+                <input
+                  type="text"
+                  placeholder="Enter your email"
+                  name="email"
+                />
+                <p>Password</p>
+                <input
+                  type="password"
+                  placeholder="Enter your password"
+                  name="password"
+                />
+                <button type="submit">Login</button>
+                <Link to="/signup">
+                  <input type="button" name="signup" value="signup" />
+                </Link>
+                <button type="reset" name="cancel" value="cancel">
+                  clear
+                </button>
+              </form>
+            </div>
+            <Footer />
+          </div>
+        )}
       </div>
     );
   }

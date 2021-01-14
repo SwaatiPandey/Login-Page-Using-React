@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import loginUrl from "../apicalls/apicall";
+// import Logged from "../pages/logged";
+
+
 
 class Signup extends Component {
   onSubmit = (event) => {
@@ -23,10 +26,16 @@ class Signup extends Component {
       }),
     })
       .then((response) => {
-        return response.json();
+       return response.json();
+       
       })
       .then((data) => {
       console.log(data);
+      if (data.data) {
+        console.log("Signup Successful");
+        alert("you have successfully signed up. Press ok to go to home page");
+        this.props.history.push("/");
+      }
         })
       .catch((err) => {
         console.log(err);
