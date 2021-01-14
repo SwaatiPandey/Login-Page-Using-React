@@ -15,7 +15,11 @@
 
 *BACKEND: It has following folders: controllers which contains file loginController.js signupController it has all the main functions.2) helpers folder conatains errorClass function,sendError function and sendResponse function.3)middleware which contains all the validations.4)routes which has Routes file it specifies routes and which request contains what functionality in it.6) app folder contains all the things required to start the express.
 
-*FRONTEND: It has following folders:Api call
-4.Demo: This is the demo link to view the program output:-http://blog-backend-hosting.herokuapp.com/blogs
+*FRONTEND: It has following folders:Api call, which contains url oh the hosted api. Component which contains footer and navigation part.Pages contains all the pages files. Routes which contains all the routes.
 
-5.Technologies Used: React.js,Nodejs,Postman,express
+
+4.Demo: This is the link of hosted backend:-http://blog-backend-hosting.herokuapp.com/blogs
+        This is the link of project 
+
+5.Technologies Used: FRONTEND   React.js,
+                     BACKEND   Nodejs,Postman,express
